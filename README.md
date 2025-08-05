@@ -61,7 +61,7 @@ To analyze employee attrition patterns and uncover actionable insights that help
 4. **Younger professionals** (25–34) are more likely to leave, possibly due to career transitions or better opportunities.
 5. **Life Sciences and Medical fields** record the highest attrition in terms of educational background.
 
-<img width="2013" height="1146" alt="HR ANALYTIC DASHBOARD" src="https://github.com/user-attachments/assets/add1dc7e-b42a-4b4c-9e79-20f059f11ece" />
+<img width="1553" height="857" alt="Screenshot 2025-08-05 191857" src="https://github.com/user-attachments/assets/3fde9e76-c903-4eef-8a6e-182b1f4800cd" />
 
 ---
 
@@ -95,9 +95,10 @@ File: `HR Data.xlsx`
 ## 🔗 Author & Contact
 
 **Oforah Ivan Chukwudumeje**  
-Data Analyst | HR & Sales Operations Analytics  
-📬 [LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/oforah/) 
-🌐 [My Portfolio Website]([https://yourwebsite.com](https://chukwudumejeoforah.carrd.co/)  
+Data Analyst | HR & Sales Operations Analytics
+
+📬 [LinkedIn](https://www.linkedin.com/in/oforah/) 
+🌐 [My Portfolio Website](https://chukwudumejeoforah.carrd.co/)  
 
 ---
 
