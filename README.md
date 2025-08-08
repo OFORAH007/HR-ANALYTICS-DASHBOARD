@@ -4,7 +4,8 @@ This repository contains insights derived from an HR dataset visualized using a 
 
 >  **Completed by:** Oforah Ivan Chukwudumeje  
 >  **Tool used:** Tableau   
->  **Dataset:** Provided in `HR Data.xlsx`  
+>  **Dataset:** Provided in  [HR Data.xlsx](https://github.com/user-attachments/files/21680144/HR.Data.xlsx)
+
 >  **Time Taken:** 4 Days
 
 ---
@@ -53,6 +54,71 @@ To analyze employee attrition patterns and uncover actionable insights that help
 
 ---
 
+<img width="2048" height="668" alt="Gemini_Generated_Image_67ziut67ziut67zi" src="https://github.com/user-attachments/assets/038eb2ee-919b-4fd4-9609-defa76df2cfa" />
+
+##  Tools Used
+
+- **Tableau** – for dynamic visualization and dashboard creation  
+- **Excel** – for data preparation and transformation
+- **SQL Database** - Data Extraction
+- **Markdown** – to document and explain insights
+
+---
+##  Dataset Description
+
+File: `[HR Data.xlsx](https://github.com/user-attachments/files/21680129/HR.Data.xlsx)`
+
+- 39 columns including: `Attrition`, `Age Band`, `Department`, `Gender`, `Job Role`, `Job Satisfaction`, `Education Field`, `Total Working Years`, etc.  
+- Clean and structured for business intelligence tools.
+
+---
+
+### SQL Code for ETL
+```
+Extracting All Employee Data
+SELECT
+  EmployeeID,
+  Age,
+  Gender,
+  Department,
+  JobRole,
+  JobSatisfaction,
+  EducationField,
+  YearsAtCompany,
+  Attrition
+FROM
+  Employees;
+```
+```
+Calculating Attrition rate by Department
+
+SELECT
+  Department,
+  COUNT(CASE WHEN Attrition = 'Yes' THEN 1 ELSE NULL END) AS AttritionCount,
+  COUNT(EmployeeID) AS TotalEmployees,
+  (COUNT(CASE WHEN Attrition = 'Yes' THEN 1 ELSE NULL END) * 1.0 / COUNT(EmployeeID)) * 100 AS AttritionRate
+FROM
+  Employees
+GROUP BY
+  Department
+ORDER BY
+  AttritionRate DESC;
+```
+```
+Analyzing Attrition by Job role & Satisfaction 
+
+SELECT
+  JobRole,
+  COUNT(CASE WHEN Attrition = 'Yes' THEN 1 ELSE NULL END) AS AttritionCount,
+  COUNT(EmployeeID) AS TotalEmployees,
+  AVG(JobSatisfaction) AS AverageJobSatisfaction
+FROM
+  Employees
+GROUP BY
+  JobRole
+ORDER BY
+  AttritionCount DESC;
+```
 ##  Insights
 
 1. **Sales department** has the highest attrition—more than half of all recorded exits.
@@ -64,34 +130,7 @@ To analyze employee attrition patterns and uncover actionable insights that help
 <img width="1550" height="859" alt="HR Analytic" src="https://github.com/user-attachments/assets/cc82c0eb-b246-4c17-9ea4-86740ff019fd" />
 
 ---
-
-##  Dataset Description
-
-File: `HR Data.xlsx`  
-- 39 columns including: `Attrition`, `Age Band`, `Department`, `Gender`, `Job Role`, `Job Satisfaction`, `Education Field`, `Total Working Years`, etc.  
-- Clean and structured for business intelligence tools.
-
----
-
-<img width="2048" height="668" alt="Gemini_Generated_Image_67ziut67ziut67zi" src="https://github.com/user-attachments/assets/038eb2ee-919b-4fd4-9609-defa76df2cfa" />
-
-##  Tools Used
-
-- **Tableau** – for dynamic visualization and dashboard creation  
-- **Excel** – for data preparation and transformation
-- **SQL Database** - Data Extraction
-- **Markdown** – to document and explain insights
-
----
-
-##  Files Included
-
-- `HR Data.xlsx` – Raw dataset  
-- `Screenshot 2025-08-05 191857.png` – HR Analytics Dashboard  
-- `README.md` – Documentation of the project  
-
----
-
+ 
 ##  Author & Contact
 
 **Oforah Ivan Chukwudumeje**  
